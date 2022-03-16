@@ -13,26 +13,17 @@ const linkStyles = {
 
 function NavBar() {
   return (
-  <div>
-      <NavLink
-        to="/home"
-        style={linkStyles}
-        >
-          Home
+    <div>
+      <NavLink to="/home" style={linkStyles}>
+        Home
       </NavLink>
-      <NavLink
-        to="/newitemform"
-        style={linkStyles}
-        >
-          New Item Form
+      <NavLink to="/newitemform" style={linkStyles}>
+        New Item Form
       </NavLink>
-      <NavLink
-        to="/currentpackinglist"
-        style={linkStyles}
-        >
-          Current Packing List
+      <NavLink to="/currentpackinglist" style={linkStyles}>
+        Current Packing List
       </NavLink>
-  </div>
+    </div>
   );
 }
 
