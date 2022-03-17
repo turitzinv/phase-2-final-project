@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
 
-function ItemCard ({name , category}) {
-
-
+function ItemCard({ name, category }) {
   return (
-    <li className="item">
-      <h4>{name}</h4>
-      <p>{category}</p>
-
-    </li>
-  )
+    <tr>
+      <td>{name}</td>
+      <td>{category}</td>
+    </tr>
+  );
 }
 
 export default ItemCard;
