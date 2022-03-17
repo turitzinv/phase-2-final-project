@@ -26,7 +26,7 @@ function App() {
         <NewItemForm />
       </Route>
       <Route exact path="/currentpackinglist">
-        <CurrentPackingList />
+        <CurrentPackingList allItems={allItems}/>
       </Route>
     </div>
   );
