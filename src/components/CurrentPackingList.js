@@ -8,8 +8,8 @@ function CurrentPackingList({ allItems }) {
 
   return (
     <div>
-      <h1>Packing List</h1>
-      <table>
+      <h1 id="packing-list-title">Packing List</h1>
+      <table id="packing-list-table">
         <thead>
           <tr>
             <th>Item</th>
