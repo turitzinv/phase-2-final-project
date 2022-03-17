@@ -1,14 +1,14 @@
 {
-  "packingList": [
+  "list": [
     {
       "id": 1,
       "item": "Running Shoes",
-      "category": "Shoes"
+      "category": "Clothing"
     },
     {
       "id": 2,
       "item": "Jeans",
-      "category": "Pants"
+      "category": "Clothing"
     },
     {
       "id": 3,
