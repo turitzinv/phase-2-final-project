@@ -8,7 +8,7 @@ function CurrentPackingList({ allItems }) {
 
   return (
     <div>
-      <h1 id="packing-list-title">Packing List</h1>
+      <h1 className="header">Packing List</h1>
       <table id="packing-list-table">
         <thead>
           <tr>

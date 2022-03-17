@@ -5,6 +5,7 @@ function ItemCard({ name, category }) {
     <tr>
       <td>{name}</td>
       <td>{category}</td>
+      <td><button>Delete</button></td>
     </tr>
   );
 }

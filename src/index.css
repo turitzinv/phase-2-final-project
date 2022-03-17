@@ -12,8 +12,9 @@ code {
     monospace;
 }
 
-#home-title {
+.header {
   text-align: center;
+  font-size: 50px;
 }
 
 #luggage {
@@ -22,12 +23,17 @@ code {
   margin-right: auto;
 }
 
-#packing-list-title {
-  text-align: center;
-}
-
 #packing-list-table {
+  font-size: 25px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
+
+#form {
+  text-align: center;
+}
+
+/* .input-field { 
+  
+} */
