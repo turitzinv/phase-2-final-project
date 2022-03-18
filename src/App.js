@@ -16,6 +16,10 @@ function App() {
     .then((items) => setItems(items))
   }, []);
 
+  function handleAddingItem(newItem) {
+    setItems([...allItems, newItem]);
+  }
+
   return (
     <div>
       <NavBar />
@@ -23,7 +27,7 @@ function App() {
         <Home />
       </Route>
       <Route exact path="/newitemform">
-        <NewItemForm />
+        <NewItemForm onAddingItem={handleAddingItem} />
       </Route>
       <Route exact path="/currentpackinglist">
         <CurrentPackingList allItems={allItems}/>
