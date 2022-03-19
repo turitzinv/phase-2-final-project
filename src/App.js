@@ -9,6 +9,7 @@ import CurrentPackingList from "./components/CurrentPackingList";
 
 function App() {
   const [allItems, setItems] = useState([]);
+  // const [search, setSearch] = useState(""); Will be used for Search
 
   useEffect(() => {
     fetch("http://localhost:3001/list")
