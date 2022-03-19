@@ -16,8 +16,6 @@ function CurrentPackingList({ allItems, handleDeleteItem }) {
     return item.category;
   });
 
-  console.log(categoryList);
-
   let uniqueCategoryList = [];
   categoryList.forEach((category) => {
     if (!uniqueCategoryList.includes(category)) {
@@ -28,8 +26,6 @@ function CurrentPackingList({ allItems, handleDeleteItem }) {
   const currentCategoryList = uniqueCategoryList.map((category) => {
     return <li key={category} className="current-categories">{category}</li>;
   });
-
-  console.log(uniqueCategoryList, "unique category list");
 
   return (
     <div>
@@ -43,7 +39,7 @@ function CurrentPackingList({ allItems, handleDeleteItem }) {
         </thead>
         <tbody>{entirePackingList}</tbody>
       </table>
-      <h3>Current Category List</h3>
+      <h3 className="current-categories">Current Category List: </h3>
       {currentCategoryList}
     </div>
   );

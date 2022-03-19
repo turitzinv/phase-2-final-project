@@ -36,6 +36,14 @@ code {
   margin-right: auto;
 }
 
+.current-categories {
+  font-size: 20px;
+  text-align: auto;
+  margin-left: 1100px;
+  margin-right: 60px;
+  margin-bottom: 10px;
+}
+
 #form {
   text-align: center;
 }

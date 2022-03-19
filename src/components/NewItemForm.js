@@ -26,7 +26,10 @@ function NewItemForm({ onAddingItem }) {
       }),
     })
       .then((resp) => resp.json())
-      .then((newItem) => onAddingItem(newItem));
+      .then((newItem) => {
+        onAddingItem(newItem)
+        alert("Item Submitted!")
+      })
   }
 
   return (
