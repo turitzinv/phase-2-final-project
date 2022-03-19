@@ -20,6 +20,11 @@ function App() {
     setItems([...allItems, newItem]);
   }
 
+  function handleDeleteItem(deletedItem) {
+    const updatedItems = allItems.filter((item) => item.id !== deletedItem.id)
+    setItems(updatedItems)
+  }
+
   return (
     <div>
       <NavBar />
@@ -30,7 +35,7 @@ function App() {
         <NewItemForm onAddingItem={handleAddingItem} />
       </Route>
       <Route exact path="/currentpackinglist">
-        <CurrentPackingList allItems={allItems}/>
+        <CurrentPackingList allItems={allItems} handleDeleteItem={handleDeleteItem}/>
       </Route>
     </div>
   );

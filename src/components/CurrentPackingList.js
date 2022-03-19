@@ -1,10 +1,11 @@
 import React from "react";
 import ItemCard from "./ItemCard";
 
-function CurrentPackingList({ allItems }) {
+function CurrentPackingList({ allItems, handleDeleteItem }) {
   const entirePackingList = allItems.map((item) => (
-    <ItemCard key={item.id} name={item.item} category={item.category} />
+    <ItemCard key={item.id} name={item.item} category={item.category} onDeleteItem={handleDeleteItem} item={item} />
   ));
+
 
   return (
     <div>
