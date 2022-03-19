@@ -25,8 +25,8 @@ function NewItemForm({ onAddingItem }) {
         category: formData.category,
       }),
     })
-    .then(resp => resp.json())
-    .then(newItem => onAddingItem(newItem))
+      .then((resp) => resp.json())
+      .then((newItem) => onAddingItem(newItem));
   }
 
   return (
@@ -34,19 +34,31 @@ function NewItemForm({ onAddingItem }) {
       <h1 className="header">Submit New Packing Item Below</h1>
       <form id="form" onSubmit={handleSubmit}>
         <div className="input-field">
-          <input type="text" name="item" placeholder="Item Name" value={formData.item} onChange={handleChange} />
+          <input
+            type="text"
+            name="item"
+            placeholder="Item Name"
+            value={formData.item}
+            onChange={handleChange}
+          />
         </div>
         <div className="input-field">
-          <input type="text" name="category" placeholder="Item Category" value={formData.category} onChange={handleChange} />
+          <input
+            type="text"
+            name="category"
+            placeholder="Item Category"
+            value={formData.category}
+            onChange={handleChange}
+          />
         </div>
         <button type="submit">Submit Item</button>
       </form>
       <img
-      id="list-picture"
-      src="https://user-images.githubusercontent.com/93049794/159100119-5c6a4f0c-a775-47fa-9461-0fd77d19257c.jpg"
-      alt="packing-list"
-      width = "410"
-      height = "350" 
+        id="list-picture"
+        src="https://user-images.githubusercontent.com/93049794/159100119-5c6a4f0c-a775-47fa-9461-0fd77d19257c.jpg"
+        alt="packing-list"
+        width="410"
+        height="350"
       />
     </div>
   );
