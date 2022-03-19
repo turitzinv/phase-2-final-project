@@ -9,7 +9,7 @@ import CurrentPackingList from "./components/CurrentPackingList";
 
 function App() {
   const [allItems, setItems] = useState([]);
-  // const [search, setSearch] = useState(""); Will be used for Search
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:3001/list")
@@ -26,6 +26,18 @@ function App() {
     setItems(updatedItems)
   }
 
+  function handleSearchFilter(searchedCategory) {
+    setSearch(searchedCategory);
+  }
+
+  function filteredCategory() {
+    if (search.length > 0) {
+      return allItems.filter((item) => item.category.includes(search))
+    } else {
+      return allItems
+    }
+  }
+
   return (
     <div>
       <NavBar />
@@ -36,7 +48,12 @@ function App() {
         <NewItemForm onAddingItem={handleAddingItem} />
       </Route>
       <Route exact path="/currentpackinglist">
-        <CurrentPackingList allItems={allItems} handleDeleteItem={handleDeleteItem}/>
+        <CurrentPackingList 
+        allItems={filteredCategory()} 
+        handleDeleteItem={handleDeleteItem}
+        handleSearchFilter={handleSearchFilter}
+        search={search}
+        />
       </Route>
     </div>
   );

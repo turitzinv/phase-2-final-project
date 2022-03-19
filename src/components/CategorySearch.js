@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CategorySearch() {
+function CategorySearch({onSearchFilter, search}) {
   return (
     <div className="searchbar">
       <label>Category Filter</label>
@@ -8,7 +8,8 @@ function CategorySearch() {
         type="text"
         id="search"
         placeholder="Type a category to filter..."
-        //value and onChange
+        onChange={(e) => onSearchFilter(e.target.value)}
+        value = {search}
       />
     </div>
   )

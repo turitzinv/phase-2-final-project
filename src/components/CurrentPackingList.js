@@ -1,7 +1,8 @@
 import React from "react";
 import ItemCard from "./ItemCard";
+import CategorySearch from "./CategorySearch";
 
-function CurrentPackingList({ allItems, handleDeleteItem }) {
+function CurrentPackingList({ allItems, handleDeleteItem, handleSearchFilter, search }) {
   const entirePackingList = allItems.map((item) => (
     <ItemCard
       key={item.id}
@@ -30,6 +31,7 @@ function CurrentPackingList({ allItems, handleDeleteItem }) {
   return (
     <div>
       <h1 className="header">Packing List</h1>
+      <CategorySearch onSearchFilter={handleSearchFilter} search={search}/>
       <table id="packing-list-table">
         <thead>
           <tr>
