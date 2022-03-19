@@ -23,6 +23,12 @@ code {
   margin-right: auto;
 }
 
+#list-picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #packing-list-table {
   font-size: 25px;
   text-align: center;
@@ -34,6 +40,21 @@ code {
   text-align: center;
 }
 
-/* .input-field { 
-  
-} */
+button {
+  padding: 0.50rem 2rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 0.25rem 1rem;
+  height: 50px;
+  margin: 5px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+

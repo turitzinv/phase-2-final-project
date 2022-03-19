@@ -41,6 +41,13 @@ function NewItemForm({ onAddingItem }) {
         </div>
         <button type="submit">Submit Item</button>
       </form>
+      <img
+      id="list-picture"
+      src="https://user-images.githubusercontent.com/93049794/159100119-5c6a4f0c-a775-47fa-9461-0fd77d19257c.jpg"
+      alt="packing-list"
+      width = "410"
+      height = "350" 
+      />
     </div>
   );
 }
