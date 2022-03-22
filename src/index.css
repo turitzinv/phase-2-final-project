@@ -44,6 +44,15 @@ code {
   margin-bottom: 10px;
 }
 
+.searchbar {
+  font-size: 20px;
+  text-align: auto;
+  margin-left: 1100px;
+  margin-right: 60px;
+  
+}
+
+
 #form {
   text-align: center;
 }
@@ -72,5 +81,6 @@ input {
 body {
   background: lightsteelblue;
 }
+
 
 
