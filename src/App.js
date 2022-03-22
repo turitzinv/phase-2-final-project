@@ -41,7 +41,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Route exact path="/home">
+      <Route exact path="/">
         <Home />
       </Route>
       <Route exact path="/newitemform">

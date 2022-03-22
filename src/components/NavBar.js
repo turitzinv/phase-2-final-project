@@ -14,7 +14,7 @@ const linkStyles = {
 function NavBar() {
   return (
     <div>
-      <NavLink to="/home" style={linkStyles}>
+      <NavLink to="/" style={linkStyles}>
         Home
       </NavLink>
       <NavLink to="/newitemform" style={linkStyles}>
