@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 import React, {useState, useEffect} from "react";
-import { Route } from "react-router-dom"; //Switch not used due to error
+import { Route, Switch } from "react-router-dom"; 
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import NewItemForm from "./components/NewItemForm";
@@ -40,7 +40,9 @@ function App() {
 
   return (
     <div>
+      
       <NavBar />
+      <Switch>
       <Route exact path="/">
         <Home />
       </Route>
@@ -55,6 +57,10 @@ function App() {
         search={search}
         />
       </Route>
+      <Route path="/*" >
+      <h1>404</h1>
+      </Route>
+      </Switch>
     </div>
   );
 }
