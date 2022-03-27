@@ -2,7 +2,7 @@ import React from "react";
 import ItemCard from "./ItemCard";
 import CategorySearch from "./CategorySearch";
 
-function CurrentPackingList({ allItems, handleDeleteItem, handleSearchFilter, search }) {
+function CurrentPackingList({ allItems, handleDeleteItem, handleSelectCategory, selectedCategory, displayCategoryList }) {
   const entirePackingList = allItems.map((item) => (
     <ItemCard
       key={item.id}
@@ -13,25 +13,25 @@ function CurrentPackingList({ allItems, handleDeleteItem, handleSearchFilter, se
     />
   ));
 
-  const categoryList = allItems.map((item) => {
-    return item.category;
-  });
+  // const categoryList = allItems.map((item) => {
+  //   return item.category;
+  // });
 
-  let uniqueCategoryList = [];
-  categoryList.forEach((category) => {
-    if (!uniqueCategoryList.includes(category)) {
-      uniqueCategoryList.push(category);
-    }
-  });
+  // let uniqueCategoryList = [];
+  // categoryList.forEach((category) => {
+  //   if (!uniqueCategoryList.includes(category)) {
+  //     uniqueCategoryList.push(category);
+  //   }
+  // });
 
-  const currentCategoryList = uniqueCategoryList.map((category) => {
-    return <li key={category} className="current-categories">{category}</li>;
-  });
+  // const currentCategoryList = uniqueCategoryList.map((category) => {
+  //   return <li key={category} className="current-categories">{category}</li>;
+  // });
 
   return (
     <div>
       <h1 className="header">Packing List</h1>
-      <CategorySearch onSearchFilter={handleSearchFilter} search={search}/>
+      <CategorySearch allItems={allItems} onSelectCategory={handleSelectCategory} selectedCategory={selectedCategory} displayCategoryList={displayCategoryList} />
       <table id="packing-list-table">
         <thead>
           <tr>
@@ -41,8 +41,6 @@ function CurrentPackingList({ allItems, handleDeleteItem, handleSearchFilter, se
         </thead>
         <tbody>{entirePackingList}</tbody>
       </table>
-      <h3 className="current-categories">Current Category List: </h3>
-      {currentCategoryList}
     </div>
   );
 }

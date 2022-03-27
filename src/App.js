@@ -9,7 +9,34 @@ import CurrentPackingList from "./components/CurrentPackingList";
 
 function App() {
   const [allItems, setItems] = useState([]);
-  const [search, setSearch] = useState("")
+  // const [search, setSearch] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
+function handleSelectCategory(event) {
+  setSelectedCategory(event.target.value)
+}
+
+const categoryList = allItems.map((item) => {
+  return item.category;
+});
+
+let uniqueCategoryList = ["All"];
+  categoryList.forEach((category) => {
+    if (!uniqueCategoryList.includes(category)) {
+      uniqueCategoryList.push(category);
+    }
+  });
+  console.log(uniqueCategoryList, "This is uniqueCategoryList")
+
+  const displayCategoryList = uniqueCategoryList.map((category, index) => {
+    if (category === "All") {
+      return <option key={index}>{category}</option>
+    } else if (category !== "All") {
+      return <option key={index}>{category}</option>
+    }
+  })
+
+  console.log(displayCategoryList, "This is displayCategoryList")
 
   useEffect(() => {
     fetch("http://localhost:3001/list")
@@ -26,16 +53,23 @@ function App() {
     setItems(updatedItems)
   }
 
-  function handleSearchFilter(searchedCategory) {
-    setSearch(searchedCategory);
-  }
+  // function handleSearchFilter(searchedCategory) {
+  //   setSearch(searchedCategory);
+  // }
 
   function filteredCategory() {
-    if (search.length > 0) {
-      return allItems.filter((item) => item.category.includes(search))
-    } else {
+    if (selectedCategory ==="All"){
       return allItems
+    } else {
+      return allItems.filter((item) =>
+        item.category === selectedCategory
+      )
     }
+    // if (search.length > 0) {
+    //   return allItems.filter((item) => item.category.includes(search))
+    // } else {
+    //   return allItems
+    // }
   }
 
   return (
@@ -53,8 +87,11 @@ function App() {
         <CurrentPackingList 
         allItems={filteredCategory()} 
         handleDeleteItem={handleDeleteItem}
-        handleSearchFilter={handleSearchFilter}
-        search={search}
+        handleSelectCategory={handleSelectCategory}
+        selectedCategory={selectedCategory}
+        displayCategoryList={displayCategoryList}
+        // handleSearchFilter={handleSearchFilter}
+        // search={search}
         />
       </Route>
       <Route path="/*" >
