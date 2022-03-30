@@ -31,7 +31,7 @@ function CurrentPackingList({ allItems, handleDeleteItem, handleSelectCategory, 
   return (
     <div>
       <h1 className="header">Packing List</h1>
-      <CategorySearch allItems={allItems} onSelectCategory={handleSelectCategory} selectedCategory={selectedCategory} displayCategoryList={displayCategoryList} />
+      <CategorySearch onSelectCategory={handleSelectCategory} selectedCategory={selectedCategory} displayCategoryList={displayCategoryList} />
       <table id="packing-list-table">
         <thead>
           <tr>

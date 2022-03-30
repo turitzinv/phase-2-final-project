@@ -11,7 +11,7 @@ function CategorySearch({ onSelectCategory, selectedCategory, displayCategoryLis
 
   return (
 
-    <div className="searchbar">
+    <div className="dropdown">
       <label>
         Category Filter
         <select name="category" 

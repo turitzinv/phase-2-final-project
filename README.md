@@ -14,8 +14,7 @@ New Item Form
 
 Current Packing List
 - Here your list is shown organized by item name and category.  Deleting an item will update the JSON server to no longer include it.
-- A category filter bar is available to filter out based on category.
-- The Current Category List is shown to assist you in knowing what categories your list entails for when you want to filter.
+- A dropdown is provided in order to filter your list to show a specific category.
 
 # JSON Server
 
