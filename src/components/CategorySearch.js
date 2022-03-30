@@ -14,7 +14,7 @@ function CategorySearch({ onSelectCategory, selectedCategory, displayCategoryLis
     <div className="dropdown">
       <label>
         Category Filter
-        <select name="category" 
+        <select id="dropdown-content" name="category" 
         value={selectedCategory}
         onChange={onSelectCategory}
         >

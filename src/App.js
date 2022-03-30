@@ -26,7 +26,7 @@ let uniqueCategoryList = ["All"];
       uniqueCategoryList.push(category);
     }
   });
-  console.log(uniqueCategoryList, "This is uniqueCategoryList")
+  // console.log(uniqueCategoryList, "This is uniqueCategoryList")
 
   const displayCategoryList = uniqueCategoryList.map((category, index) => {
     if (category === "All") {
@@ -36,7 +36,7 @@ let uniqueCategoryList = ["All"];
     }
   })
 
-  console.log(displayCategoryList, "This is displayCategoryList")
+  // console.log(displayCategoryList, "This is displayCategoryList")
 
   useEffect(() => {
     fetch("http://localhost:3001/list")
