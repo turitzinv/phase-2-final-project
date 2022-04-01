@@ -28,5 +28,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-//NavLinks for Home, New Item Form, Current Packing List

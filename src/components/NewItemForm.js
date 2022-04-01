@@ -13,7 +13,6 @@ function NewItemForm({ onAddingItem }) {
     });
   }
 
-
   function handleSubmit(event) {
     event.preventDefault();
     fetch("http://localhost:3001/list", {
@@ -32,7 +31,6 @@ function NewItemForm({ onAddingItem }) {
         alert("Item Submitted!")
       })
   }
-
 
   return (
     <div>

@@ -13,21 +13,6 @@ function CurrentPackingList({ allItems, handleDeleteItem, handleSelectCategory, 
     />
   ));
 
-  // const categoryList = allItems.map((item) => {
-  //   return item.category;
-  // });
-
-  // let uniqueCategoryList = [];
-  // categoryList.forEach((category) => {
-  //   if (!uniqueCategoryList.includes(category)) {
-  //     uniqueCategoryList.push(category);
-  //   }
-  // });
-
-  // const currentCategoryList = uniqueCategoryList.map((category) => {
-  //   return <li key={category} className="current-categories">{category}</li>;
-  // });
-
   return (
     <div>
       <h1 className="header">Packing List</h1>

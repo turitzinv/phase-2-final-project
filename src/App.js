@@ -9,7 +9,6 @@ import CurrentPackingList from "./components/CurrentPackingList";
 
 function App() {
   const [allItems, setItems] = useState([]);
-  // const [search, setSearch] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
 
 function handleSelectCategory(event) {
@@ -26,17 +25,10 @@ let uniqueCategoryList = ["All"];
       uniqueCategoryList.push(category);
     }
   });
-  // console.log(uniqueCategoryList, "This is uniqueCategoryList")
 
   const displayCategoryList = uniqueCategoryList.map((category, index) => {
-    if (category === "All") {
       return <option key={index}>{category}</option>
-    } else if (category !== "All") {
-      return <option key={index}>{category}</option>
-    }
   })
-
-  // console.log(displayCategoryList, "This is displayCategoryList")
 
   useEffect(() => {
     fetch("http://localhost:3001/list")
@@ -53,10 +45,6 @@ let uniqueCategoryList = ["All"];
     setItems(updatedItems)
   }
 
-  // function handleSearchFilter(searchedCategory) {
-  //   setSearch(searchedCategory);
-  // }
-
   function filteredCategory() {
     if (selectedCategory ==="All"){
       return allItems
@@ -65,16 +53,10 @@ let uniqueCategoryList = ["All"];
         item.category === selectedCategory
       )
     }
-    // if (search.length > 0) {
-    //   return allItems.filter((item) => item.category.includes(search))
-    // } else {
-    //   return allItems
-    // }
   }
 
   return (
     <div>
-      
       <NavBar />
       <Switch>
       <Route exact path="/">
