@@ -2,6 +2,10 @@
 
 Packing List is a Single Page Application that asists you in keeping track of the items you plan to bring with you.
 
+# Video Demonstration of Application
+
+https://youtu.be/RLQR08R36Mk
+
 # Routes
 
 There are three routes used to navigate through the application.
